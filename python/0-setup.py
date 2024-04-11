@@ -4,12 +4,14 @@ from pymongo import MongoClient, errors
 import os
 from db import *
 
+# creating client
 stats = client.stats
 print(stats)
 
 dbs = client.list_database_names()
 print(dbs)
 
+#list collection names
 thisdb = client.sample_restaurants
 colls = thisdb.list_collection_names()
 print(colls)
